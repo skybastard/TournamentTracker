@@ -48,7 +48,7 @@
             this.createTeamLabel.ForeColor = System.Drawing.Color.Black;
             this.createTeamLabel.Location = new System.Drawing.Point(32, 44);
             this.createTeamLabel.Name = "createTeamLabel";
-            this.createTeamLabel.Size = new System.Drawing.Size(210, 50);
+            this.createTeamLabel.Size = new System.Drawing.Size(209, 50);
             this.createTeamLabel.TabIndex = 5;
             this.createTeamLabel.Text = "Create Prize";
             // 
@@ -74,6 +74,7 @@
             this.prizeAmountValue.Name = "prizeAmountValue";
             this.prizeAmountValue.Size = new System.Drawing.Size(277, 35);
             this.prizeAmountValue.TabIndex = 9;
+            this.prizeAmountValue.Text = "0";
             // 
             // prizeAmountLabel
             // 
@@ -90,13 +91,15 @@
             this.prizePercentageValue.Name = "prizePercentageValue";
             this.prizePercentageValue.Size = new System.Drawing.Size(277, 35);
             this.prizePercentageValue.TabIndex = 11;
+            this.prizePercentageValue.Text = "0";
+            this.prizePercentageValue.TextChanged += new System.EventHandler(this.PrizePercentageValue_TextChanged);
             // 
             // prizePercentageLabel
             // 
             this.prizePercentageLabel.AutoSize = true;
             this.prizePercentageLabel.Location = new System.Drawing.Point(36, 344);
             this.prizePercentageLabel.Name = "prizePercentageLabel";
-            this.prizePercentageLabel.Size = new System.Drawing.Size(168, 30);
+            this.prizePercentageLabel.Size = new System.Drawing.Size(167, 30);
             this.prizePercentageLabel.TabIndex = 10;
             this.prizePercentageLabel.Text = "Prize Percentage";
             // 
@@ -106,6 +109,7 @@
             this.placeNameValue.Name = "placeNameValue";
             this.placeNameValue.Size = new System.Drawing.Size(277, 35);
             this.placeNameValue.TabIndex = 13;
+            this.placeNameValue.TextChanged += new System.EventHandler(this.PlaceNameValue_TextChanged);
             // 
             // placeNameLabel
             // 
@@ -133,13 +137,14 @@
             this.createPrizeButton.TabIndex = 15;
             this.createPrizeButton.Text = "Create Prize";
             this.createPrizeButton.UseVisualStyleBackColor = true;
+            this.createPrizeButton.Click += new System.EventHandler(this.CreatePrizeButton_Click);
             // 
             // CreatePrize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(807, 542);
+            this.ClientSize = new System.Drawing.Size(526, 537);
             this.Controls.Add(this.createPrizeButton);
             this.Controls.Add(this.orLabel);
             this.Controls.Add(this.placeNameValue);
@@ -155,6 +160,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "CreatePrize";
             this.Text = "Create Prize";
+            this.Load += new System.EventHandler(this.CreatePrize_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
