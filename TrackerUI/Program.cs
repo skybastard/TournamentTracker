@@ -20,7 +20,7 @@ namespace TrackerUI
             TrackerLibrary.GlobalConfig.InitializeCinnections(TrackerLibrary.DatabaseType.TextFile);
             //Application.Run(new TournamentDashBoard());
 
-            Application.Run(new CreatePrize());
+            Application.Run(new CreateTeams());
         }
     }
 }
