@@ -93,6 +93,7 @@
             this.selectTeamMemberDropDown.Name = "selectTeamMemberDropDown";
             this.selectTeamMemberDropDown.Size = new System.Drawing.Size(315, 38);
             this.selectTeamMemberDropDown.TabIndex = 8;
+            this.selectTeamMemberDropDown.SelectedIndexChanged += new System.EventHandler(this.SelectTeamMemberDropDown_SelectedIndexChanged);
             // 
             // addTeamMemberButton
             // 
@@ -102,6 +103,7 @@
             this.addTeamMemberButton.TabIndex = 9;
             this.addTeamMemberButton.Text = "Add Team Member";
             this.addTeamMemberButton.UseVisualStyleBackColor = true;
+            this.addTeamMemberButton.Click += new System.EventHandler(this.AddTeamMemberButton_Click);
             // 
             // addNewMemberGroupBox
             // 

@@ -54,5 +54,14 @@ namespace TrackerLibrary
             return model;
 
         }
+
+        public List<PersonModel> GetPerson_All()
+        {
+            // TODO only here to get Interface contract to work
+            List<PersonModel> output = new List<PersonModel>();
+            
+
+            return output;
+        }
     }
 }

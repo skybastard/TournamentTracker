@@ -14,6 +14,7 @@ namespace TrackerLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection // this is built in
     {
+        private const string db = "Tournaments";
         public PersonModel CreatePerson(PersonModel model)
         {
             // IDbConnection is from Microsoft
@@ -59,6 +60,21 @@ namespace TrackerLibrary.DataAccess
 
                 return model;
             }
+        }
+
+        public List<PersonModel> GetPerson_All()
+        {
+            List<PersonModel> output;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            {
+                //TODO dbo.spPeople_GetAll is not existing
+                output = connection.Query<PersonModel>("dbo.spPeople_GetAll").ToList();
+            }
+
+            return output;
+
+            
+
         }
     }
 }
